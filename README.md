@@ -45,7 +45,8 @@
 ### Материалы для изучения
 
 - [Плейлист по Redux](https://www.youtube.com/watch?v=5Qtqzeh5FeM&list=PL6DxKON1uLOHsBCJ_vVuvRsW84VnqmPp6) - исчерпывающая информация о принципе работы Redux, а также наглядный пример его использования
-- [Инструкция по использованию MobX](https://www.youtube.com/watch?v=jn-L1SFYdIc)
+- [Видео по использованию MobX](https://www.youtube.com/watch?v=jn-L1SFYdIc)
+- [Видео по использованию Redux toolkit, RTK Query](https://www.youtube.com/watch?v=Od5H_CiU2vM)
 - [LocalStorage, SessionStorage](https://learn.javascript.ru/localstorage) - глава из учебника про веб-хранилища
 
 ### Список тем для собеседования
@@ -56,7 +57,8 @@
 - CSS: Каскадность, приоритет селекторов, псевдоклассы, псевдоэлементы, flex, grid
 - DOM: События DOM дерева, навигация по дереву, изменение элементов дерева
 - HTTP, HTTPS, REST API
-- Бандлеры, принцип работы, webpack, лоадеры, плагины 
+- Бандлеры, принцип работы, webpack, лоадеры, плагины
+- Линтеры, принцип работы, правила
 
 #### JavaScript
 - Типы данных, сравнение типов, преобразование типов
