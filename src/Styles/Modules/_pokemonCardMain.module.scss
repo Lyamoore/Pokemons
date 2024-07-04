@@ -1,0 +1,30 @@
+.container {
+  padding-block: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: 500px;
+  position: relative;
+
+  &__btn {
+    width: 100px;
+    position: absolute;
+    left: -120px;
+  }
+
+  &__img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  &__id {
+    margin-bottom: 5px;
+  }
+
+  &__ul {
+    padding-left: 1rem;
+    list-style: disc;
+  }
+}

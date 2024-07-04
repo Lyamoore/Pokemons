@@ -1,0 +1,36 @@
+.nav {
+  &__container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    column-gap: 20px;
+    padding-block: 10px;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    padding-left: 0px;
+    margin-bottom: 0px;
+  }
+
+  &__link {
+    font-size: 1.20rem;
+    color: #000000;
+    text-decoration: none;
+
+    &_brand {
+      font-size: 1.35rem;
+      font-weight: 500;
+    }
+
+    &_active {
+      color: #0d6dfd;
+    }
+
+    &:hover {
+      color: #0d6dfdc1;
+    }
+  }
+}

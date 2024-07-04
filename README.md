@@ -1,97 +1,70 @@
-# Pokedex-app final
+# Getting Started with Create React App
 
-## Дипломный проект
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Защита дипломного проекта будет состоять из 2 частей:
-1. Демонстрация функционала приложения на основании критериев приемки
-2. Прохождение краткого собеседования на основании пройденного материала
+## Available Scripts
 
-### Критерии приемки
+In the project directory, you can run:
 
-- При загрузке страницы должен отправляться апи запрос на получение списка покемонов
-- Полученные покемоны должны отображаться в виде плитки (3-4 покемона в 1 ряду)
-- В карточке покемона должна быть показана аватарка, имя, id, а также кнопка в двух состояниях "Поймать!" и "Пойман". В состоянии "Пойман" кнопка должна становиться disabled
-- При нажатии на кнопку "Поймать!" кнопка должна переходить в состояние "Пойман". Состояние "Пойман" должно сохраняться до тех пор, пока не перезагружена страница. Поймать можно любого покемона.
-- На странице должна быть пагинация, либо постраничная, либо в виде endless scroll (на ваше усмотрение)
-- При переходе на вкладку "Пойманные покемоны" должны попадать те покемоны, у которых была нажата кнопка "Поймать!"
-- Если при переходе на вкладку "Пойманные покемоны" еще не был пойман ни один покемон, то должна быть отображена страница с информацией о том, что ни один покемон пока не пойман
-- При нажатии на карточку покемона на главной странице и на вкладке пойманных покемонов должна отображаться страница с информацией об этом покемоне
-- На странице с информацией о покемоне должна отображаться информация о покемоне, полученная по запросу `https://pokeapi.co/api/v2/pokemon/{id or name}`: Имя, id, способность, статус (пойман или нет), дата поимки (при поимке покемона нужно доработать функционал, что помимо поимки покемона добавляется дата и время его поимки, ДД-ММ-ГГГГ ЧЧ-ММ-СС)
-- На странице с информацией о покемоне должна быть кнопка "Назад" для возвращения на главную страницу или на страницу с пойманными покемонами (в зависимости от того, на какой странице мы нажали на карточку покемона)
-- В случае введения в адресную строку несуществующего пути приложения должна быть отображена кастомная страница 404
-- **Пойманные покемоны должны сохраняться после перезагрузки страницы**
+### `npm start`
 
-### Требования по выполнению задачи
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-- В приложение должен быть добавлен Redux/RTK Query/MobX (на ваше усмотрение)
-- Пойманные покемоны должны храниться в сторе
-- Redux/MobX должен быть имплементирован в текущую архитектуру приложения
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-### Допущения
+### `npm test`
 
-- Внешний вид страницы произвольный
-- Адаптивная верстка на ваше усмотрение
-- Хуки для Redux использовать МОЖНО. Функция Reducer может быть либо частью pokemonService, либо частью класса созданного в store, зависит от вашей реализации
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### Порядок выполнения задания
+### `npm run build`
 
-1. Нажимаете на кнопку Fork, создаёте свою ветку в которой выполняете задание
-2. Берёте код из предыдущего домашнего задания
-3. Коммитите и пушите изменения в свою ветку
-4. **В день вашей защиты но не позднее чем за 1 час до времени защиты присылаете ссылку на ваш код**
-5. **Проводите демо проекта (демонстрируете фунционал на основании критериев приемки)**
-6. **Отвечаете на вопросы в формате собеседования**
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-### Материалы для изучения
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-- [Плейлист по Redux](https://www.youtube.com/watch?v=5Qtqzeh5FeM&list=PL6DxKON1uLOHsBCJ_vVuvRsW84VnqmPp6) - исчерпывающая информация о принципе работы Redux, а также наглядный пример его использования
-- [Видео по использованию MobX](https://www.youtube.com/watch?v=jn-L1SFYdIc)
-- [Видео по использованию Redux toolkit, RTK Query](https://www.youtube.com/watch?v=Od5H_CiU2vM)
-- [LocalStorage, SessionStorage](https://learn.javascript.ru/localstorage) - глава из учебника про веб-хранилища
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### Список тем для собеседования
+### `npm run eject`
 
-#### Общие вопросы по web-технологиям
-- Critical rendering path
-- HTML: Базовые теги, семантические теги, атрибуты, data-атрибуты, классы, async defer, accessibility
-- CSS: Каскадность, приоритет селекторов, псевдоклассы, псевдоэлементы, flex, grid
-- DOM: События DOM дерева, навигация по дереву, изменение элементов дерева
-- HTTP, HTTPS, REST API
-- Бандлеры, принцип работы, webpack, лоадеры, плагины
-- Линтеры, принцип работы, правила
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-#### JavaScript
-- Типы данных, сравнение типов, преобразование типов
-- Переменные var, let, const, всплытие переменных, TDZ
-- Виды функций, сходства и отличия
-- Замыкание
-- Объекты и массивы. Особенности работы со ссылочными типами данных, методы массивов
-- Map и Set, отличия от объектов и массивов
-- Контекст this, виды привязок, call, apply, bind
-- Классы
-- Наследование, отличие proto и prototype
-- AJAX
-- Промисы
-- Хранение данных в браузере
-- Event Loop
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-#### TypeScript
-- Alias типы и интерфейсы
-- Дженерики
-- Utility Types
-- Условные типы
-- Перегрузка функций
-- Операторы
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-#### React
-- Virtual DOM, reconcilation
-- JSX|TSX
-- Жизненный цикл компонента
-- Функциональные, классовые компоненты
-- Хуки (useState, useEffect, useMemo, useCallback, useRef, useContext знать как минимум). Сходства и отличия хуков и методов классовых компонентов
-- Роутинг React
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-#### OOP и чистота кода
-- 4 принципа ООП
-- Паттерны проектирования
-- SOLID, DRY KISS YAGNI
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
