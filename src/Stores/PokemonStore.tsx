@@ -1,10 +1,11 @@
 import { IPokemonCard } from "@/Models/Cards";
+import { IPokemonStore } from "@/Models/PokemonStore";
 import { getPokemonService } from "@/Services/GetPokemonService";
 
 import { getCurrentDateTime } from "@/Services/getCurrentDateTime";
 import { makeAutoObservable, runInAction } from "mobx";
 
-class PokemonStore {
+class PokemonStore implements IPokemonStore {
   constructor() {
     makeAutoObservable(this);
     this.loadCaughtPokemons();
@@ -24,7 +25,7 @@ class PokemonStore {
 
       const updatedPokemons = newPokemons.map((newPokemon) => {
         const caughtPokemon = this.caughtPokemons.find(
-          (cp) => cp.id === newPokemon.id
+          (cp) => cp.id === newPokemon.id,
         );
 
         return {
